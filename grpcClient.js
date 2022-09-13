@@ -11,5 +11,6 @@ const client = new userPackage.Billing("localhost:" + PORT, grpc.credentials.cre
 
 
 client.readUser({}, (err, response) => {
+    if (err) console.log(`error`, err);
     console.log("Recieved from gRPC server " + JSON.stringify(response))
 })
