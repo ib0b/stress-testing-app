@@ -6,7 +6,7 @@ services:
     ports:
       - "4000:3000"
     volumes:
-      - ./haproxy:/usr/local/etc/haproxy
+      - ./haproxy-grpc:/usr/local/etc/haproxy
     depends_on:
       - nodeapp1
       - nodeapp2
