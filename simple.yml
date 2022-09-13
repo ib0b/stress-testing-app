@@ -7,6 +7,15 @@ services:
       - "3000:3000"
     volumes:
       - ./haproxy:/usr/local/etc/haproxy
+    depends_on:
+      - nodeapp1
+      - nodeapp2
+      - nodeapp3
+      - nodeapp4
+      - nodeapp5
+      - nodeapp6
+      - nodeapp7
+      - nodeapp8
   nodeapp1:
     image: simple
     environment:
