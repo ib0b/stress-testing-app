@@ -30,7 +30,7 @@ services:
   nodeapp6:
     image: simple
     environment:
-      - PORT=3004
+      - PORT=3006
   nodeapp7:
     image: simple
     environment:
