@@ -14,8 +14,8 @@ services:
       - nodeapp4
       - nodeapp5
       - nodeapp6
-      # - nodeapp7
-      # - nodeapp8
+      - nodeapp7
+      - nodeapp8
   nodeapp1:
     image: simple
     environment:
@@ -40,14 +40,14 @@ services:
     image: simple
     environment:
       - PORT=3006
-  # nodeapp7:
-  #   image: simple
-  #   environment:
-  #     - PORT=3007
-  # nodeapp8:
-  #   image: simple
-  #   environment:
-  #     - PORT=3008
+  nodeapp7:
+    image: simple
+    environment:
+      - PORT=3007
+  nodeapp8:
+    image: simple
+    environment:
+      - PORT=3008
 
   # nodeapp11:
   #   image: simple
