@@ -14,8 +14,8 @@ services:
       - nodeapp4
       - nodeapp5
       - nodeapp6
-      - nodeapp7
-      - nodeapp8
+      # - nodeapp7
+      # - nodeapp8
   nodeapp1:
     image: simple
     environment:
