@@ -7,7 +7,7 @@ client.load(['../definitions'], 'user.proto');
 
 
 export const options = {
-    vus: 1000,
+    vus: 100,
     duration: '30s',
     discardResponseBodies: true,
 };
@@ -18,12 +18,14 @@ export default () => {
         timeout: "2s"
     });
 
+    for (let i = 0; i < 100; i++) {
 
-    const response = client.invoke('userPackage.Billing/readUser', {});
+        const response = client.invoke('userPackage.Billing/readUser', {});
 
-    check(response, {
-        'status is OK': (r) => r && r.status === grpc.StatusOK,
-    });
+        check(response, {
+            'status is OK': (r) => r && r.status === grpc.StatusOK,
+        });
+    }
 
     // console.log(JSON.stringify(response.message));
 
@@ -31,4 +33,4 @@ export default () => {
     sleep(0.01);
 };
 
-//k6 run grpc-tests/test.js --duration 10s
+//k6 run grpc-tests/rps.js --duration 10s
