@@ -1,25 +1,41 @@
-version : '3'
+version: '3'
 
 services:
-    lb:
-        image: haproxy
-        ports:
-            - "3000:3000"
-        volumes:
-            - ./haproxy:/usr/local/etc/haproxy
-    nodeapp1:
-        image: simple
-        environment:
-            - PORT=3001
-    nodeapp2:
-        image: simple
-        environment:
-            - PORT=3002
-    nodeapp3:
-        image: simple
-        environment:
-            - PORT=3003
-    nodeapp4:
-        image: simple
-        environment:
-            - PORT=3004
+  awesome:
+   image: simple
+   ports:
+     - 3000
+   environment:
+     - SERVICE_PORTS=3000
+     - PORT=3000
+   deploy:
+     replicas: 20
+     update_config:
+       parallelism: 5
+       delay: 10s
+     restart_policy:
+       condition: on-failure
+       max_attempts: 3
+       window: 120s
+   networks:
+     - web
+
+  proxy:
+    image: dockercloud/haproxy
+    depends_on:
+      - awesome
+    environment:
+      - BALANCE=leastconn
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    ports:
+      - 80:80
+    networks:
+      - web
+    deploy:
+      placement:
+        constraints: [node.role == manager]
+
+networks:
+  web:
+    driver: overlay            
