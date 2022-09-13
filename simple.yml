@@ -1,0 +1,25 @@
+version: "3"
+
+services:
+  lb:
+    image: haproxy
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy
+  nodeapp1:
+    image: simple
+    environment:
+      - PORT=3001
+  nodeapp2:
+    image: simple
+    environment:
+      - PORT=3002
+  nodeapp3:
+    image: simple
+    environment:
+      - PORT=3003
+  nodeapp4:
+    image: simple
+    environment:
+      - PORT=3004
