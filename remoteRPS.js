@@ -27,4 +27,4 @@ export default function () {
     sleep(0.1); // 100ms sleep between iterations.
 }
 
-//k6 run local.js--duration = 30s--vus = 32
+//k6 run remoteRPS.js --duration=30s --vus=32

@@ -23,3 +23,19 @@ services:
     image: simple
     environment:
       - PORT=3004
+  nodeapp5:
+    image: simple
+    environment:
+      - PORT=3005
+  nodeapp6:
+    image: simple
+    environment:
+      - PORT=3004
+  nodeapp7:
+    image: simple
+    environment:
+      - PORT=3007
+  nodeapp8:
+    image: simple
+    environment:
+      - PORT=3008
