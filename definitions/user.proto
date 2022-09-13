@@ -1,0 +1,19 @@
+syntax = "proto3";
+
+package userPackage;
+
+service Billing {   
+    rpc readUser(voidNoParam) returns (User);
+}
+
+message voidNoParam {}
+
+message User { 
+    string username = 1;
+    string premium = 2;
+    string nextBillingDate = 3;
+    string country = 4;
+    string port = 5;
+    int32 UUID = 6;
+}
+
