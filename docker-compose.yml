@@ -9,7 +9,7 @@ services:
      - SERVICE_PORTS=3000
      - PORT=3000
    deploy:
-     replicas: 20
+     replicas: 8
      update_config:
        parallelism: 5
        delay: 10s

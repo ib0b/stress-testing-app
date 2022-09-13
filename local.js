@@ -10,7 +10,7 @@ export let options = {
         }
     }
 };
-let host = "http://172.31.43.204:3000/"
+let host = "http://172.31.43.204/"
 export default function () {
     // relentless hammering of these 6 URLs.
     // 20 batches per iteration.
