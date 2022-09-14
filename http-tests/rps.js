@@ -20,3 +20,4 @@ export default function () {
     }
     sleep(0.1); // 100ms sleep between iterations.
 }
+//k6 run http-tests/rps.js --duration=30s --vus=32
