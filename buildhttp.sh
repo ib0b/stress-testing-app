@@ -1,1 +1,1 @@
-docker build . -t http
+docker build . -f HttpDockerfile -t http
