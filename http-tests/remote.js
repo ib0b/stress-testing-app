@@ -8,4 +8,4 @@ export default function () {
     http.get(config.REMOTE_HTTP_HOST);
 }
 
-//k6 run http-tests/remote.js --duration=30s --vus=32
+// k6 run http-tests/remote.js --duration=30s --vus=32
