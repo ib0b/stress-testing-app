@@ -51,10 +51,18 @@ You have the option of running the client on the same machine as the server, or 
 You will need to [install k6](https://k6.io/docs/getting-started/installation/) based on your OS.
 Once installed run the following command while in the root directory of the repo.
 
+Running localy : change LOCAL_HTTP_HOST if need be in config.js
+
 ```
 #increase number of concurrent connections allowed by the OS(Linux)
 ulimit -n 250000
 
 #runs the test locally
-k6 run http-tests/local.js --duration=30s --vus=32
+k6 run http-tests/local.js --duration=60s --vus=32
+```
+
+Running remotely: change REMOTE_HTTP_HOST if need be in config.js
+
+```
+k6 run http-tests/remote.js --duration=60s --vus=32
 ```
