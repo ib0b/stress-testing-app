@@ -10,10 +10,19 @@ message voidNoParam {}
 
 message User { 
     string username = 1;
-    string premium = 2;
+    bool premium = 2;
     string nextBillingDate = 3;
-    string country = 4;
+    Country country = 4;
     string port = 5;
     int32 UUID = 6;
+}
+
+enum Country {
+  KE = 0;
+  US = 1;
+  UK = 2;
+  AU = 3;
+  JP = 4;
+  DE = 5;
 }
 
