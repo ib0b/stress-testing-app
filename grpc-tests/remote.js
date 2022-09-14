@@ -20,4 +20,4 @@ export default () => {
     });
     // Do NOT close the client
 };
-//k6 run grpc-tests/remote.js --duration 10s --vus=1
+//k6 run grpc-tests/remote.js --duration 10s --vus=32
