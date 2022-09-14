@@ -26,11 +26,11 @@ export default () => {
             'status is OK': (r) => r && r.status === grpc.StatusOK,
         });
     }
-
+    //uncomment to see rpc output - will add lag to large tests
     // console.log(JSON.stringify(response.message));
 
     client.close();
     sleep(0.01);
 };
 
-//k6 run grpc-tests/rps.js --duration 10s
+//k6 run grpc-tests/rps.js --duration 10s --vus=32
