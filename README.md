@@ -61,7 +61,7 @@ ulimit -n 250000
 k6 run http-tests/local.js --duration=60s --vus=32
 ```
 
-Running remotely: change REMOTE_HTTP_HOST if need be in config.js
+Running remotely: change REMOTE_HTTP_HOST in config.js to your remote host.
 
 ```
 k6 run http-tests/remote.js --duration=60s --vus=32
