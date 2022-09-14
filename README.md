@@ -97,6 +97,10 @@ For more k6 documentation see this.
 ## Results
 
 The following were the results of running on a c5.4xlarge, 32 vCPUs with 64GB RAM on AWS.
-HTTP test 60 seconds 2 Million Requests Per Minute
+### HTTP test 60 seconds 2 Million Requests Per Minute
+<img width="776" alt="highestC5x4" src="https://user-images.githubusercontent.com/18010106/190234975-9c47f163-1817-4990-bdbd-7f66b61a6c63.png">
 
-RPC test 80 seconds 1.5 Million Requests Per Minute
+### RPC test 80 seconds 1.5 Million Requests Per Minute
+<img width="692" alt="rpc1m" src="https://user-images.githubusercontent.com/18010106/190234830-36c08ffb-1b0f-4b2a-a33a-79a01464e9fd.png">
+the biggest advantage of gRPC is bandwith saving. In this example our data savings were about 20%.
+
