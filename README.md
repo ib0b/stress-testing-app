@@ -93,3 +93,10 @@ k6 run grpc-tests/remote.js --duration=60s --vus=32
 
 You can experiment with the number of nodes in your cluster, also you can change --vus which stand for number of virtual users.
 For more k6 documentation see this.
+
+## Results
+
+The following were the results of running on a c5.4xlarge, 32 vCPUs with 64GB RAM on AWS.
+HTTP test 60 seconds 2 Million Requests Per Minute
+
+RPC test 80 seconds 1.5 Million Requests Per Minute
