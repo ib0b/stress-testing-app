@@ -1,13 +1,13 @@
 import grpc from 'k6/net/grpc';
 import { check } from 'k6';
+import config from '../config.js'
 
 const client = new grpc.Client();
-const GRPC_SERVER = "localhost:4000"
 client.load(['../definitions'], 'user.proto');
 
 export default () => {
     if (__ITER == 0) {
-        client.connect(GRPC_SERVER, {
+        client.connect(config.LOCAL_GRPC_HOST, {
             plaintext: true, //allow insecure connection
             timeout: "2s"
         });
