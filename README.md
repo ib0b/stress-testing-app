@@ -88,3 +88,8 @@ Running remotely: change REMOTE_HTTP_HOST in config.js to your remote host.
 ```
 k6 run grpc-tests/remote.js --duration=60s --vus=32
 ```
+
+## Tweaks
+
+You can experiment with the number of nodes in your cluster, also you can change --vus which stand for number of virtual users.
+For more k6 documentation see this.
