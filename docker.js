@@ -2,7 +2,7 @@ const express = require('express')
 
 const app = express()
 const PORT = process.env.PORT || 3000
-const UUID = new Date().getTime() //give server a unique identifier
+const UUID = new Date().getTime() + randomInt(1, 1000)  //give server a unique identifier
 
 app.listen(PORT, () => console.log(`listeing on port ${PORT}`))
 
@@ -14,3 +14,6 @@ app.get("/", (req, res) => res.send({
     port: PORT,
     UUID
 }))
+function randomInt(min, max) {
+    return min + Math.floor(Math.random() * (max - min))
+}
