@@ -31,4 +31,4 @@ export default () => {
     sleep(0.01);
 };
 
-//k6 run grpc-tests/test.js --duration 10s
+//k6 run grpc-tests/test.js --duration 10s --vus=32
