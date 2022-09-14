@@ -1,0 +1,83 @@
+version: "3"
+
+services:
+  lb:
+    image: haproxy
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./haproxy:/usr/local/etc/haproxy
+    depends_on:
+      - nodeapp1
+      - nodeapp2
+      - nodeapp3
+      - nodeapp4
+      - nodeapp5
+      - nodeapp6
+      - nodeapp7
+      - nodeapp8
+  nodeapp1:
+    image: simple
+    environment:
+      - PORT=3001
+  nodeapp2:
+    image: simple
+    environment:
+      - PORT=3002
+  nodeapp3:
+    image: simple
+    environment:
+      - PORT=3003
+  nodeapp4:
+    image: simple
+    environment:
+      - PORT=3004
+  nodeapp5:
+    image: simple
+    environment:
+      - PORT=3005
+  nodeapp6:
+    image: simple
+    environment:
+      - PORT=3006
+  nodeapp7:
+    image: simple
+    environment:
+      - PORT=3007
+  nodeapp8:
+    image: simple
+    environment:
+      - PORT=3008
+
+  # nodeapp11:
+  #   image: simple
+  #   environment:
+  #     - PORT=3011
+  # nodeapp12:
+  #   image: simple
+  #   environment:
+  #     - PORT=3012
+  # nodeapp13:
+  #   image: simple
+  #   environment:
+  #     - PORT=3013
+  # nodeapp14:
+  #   image: simple
+  #   environment:
+  #     - PORT=3014
+  # nodeapp15:
+  #   image: simple
+  #   environment:
+  #     - PORT=3015
+  # nodeapp16:
+  #   image: simple
+  #   environment:
+  #     - PORT=3016
+  # nodeapp17:
+  #   image: simple
+  #   environment:
+  #     - PORT=3017
+  # nodeapp18:
+  #   image: simple
+  #   environment:
+  #     - PORT=3018
