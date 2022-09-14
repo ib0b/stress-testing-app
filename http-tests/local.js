@@ -8,4 +8,4 @@ export default function () {
     http.get(config.LOCAL_HTTP_HOST);
 }
 
-//k6 run http-tests/test.js --duration=30s --vus=32
+//k6 run http-tests/local.js --duration=30s --vus=32
