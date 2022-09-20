@@ -15,7 +15,7 @@ There are two types of test that can be perfomed.
 
 ## Installation
 
-You will docker installed on your server computer
+You will need docker installed on your server computer
 You will also need to [install k6](https://k6.io/docs/getting-started/installation/)
 
 ## Running the server
