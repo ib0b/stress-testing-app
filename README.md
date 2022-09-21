@@ -1,3 +1,4 @@
+
 # Stress Testing App
 
 ## Introduction
@@ -73,7 +74,7 @@ You have the option of running the client on the same machine as the server, or 
 You will need to [install k6](https://k6.io/docs/getting-started/installation/) based on your OS.
 Once installed run the following command while in the root directory of the repo.
 
-Running localy : change LOCAL_GRPC_HOST if need be in config.js
+Running localy : change LOCAL_GRPC_HOST if need be in *config.js*
 
 ```
 #increase the limit of concurrent connections allowed by the OS(Linux)
@@ -94,9 +95,11 @@ k6 run grpc-tests/remote.js --duration=60s --vus=32
 You can experiment with the number of nodes in your cluster, also you can change --vus which stand for number of virtual users.
 For more k6 documentation see [this.](https://k6.io/docs/)
 
+Change the server response as per you service requirements in *docker.js* file
+
 ## Results
 
-The following were the results of running on a c5.4xlarge, 32 vCPUs with 64GB RAM on AWS.
+The following were the results of running on a **c5.4xlarge, 16 vCPUs with 32 GB RAM** on AWS.
 ### HTTP test 60 seconds 2 Million Requests Per Minute
 <img width="776" alt="highestC5x4" src="https://user-images.githubusercontent.com/18010106/190234975-9c47f163-1817-4990-bdbd-7f66b61a6c63.png">
 
